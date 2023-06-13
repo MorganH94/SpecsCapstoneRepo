@@ -11,11 +11,12 @@ const Form = () => {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
     const [status, setStatus] = useState(true)
+    const [mood, setMood] = useState('')
 
     const handleSubmit = e => {
         e.preventDefault()
 
-        axios.post('/posts', {title, content, status, userId}, {
+        axios.post('/posts', {title, content, status, userId, mood}, {
             headers: {
                 authorization: token
             }
@@ -31,14 +32,14 @@ const Form = () => {
             <form className='form add-post-form' onSubmit={handleSubmit}>
                 <input 
                     type='text'
-                    placeholder='title'
+                    placeholder='Add Your Title Here'
                     value={title}
                     onChange={e => setTitle(e.target.value)}
                     className='form-input add-post-input'
                 />
                 <textarea 
                     type='text'
-                    placeholder='content'
+                    placeholder='Add Your Content Here'
                     value={content}
                     onChange={e => setContent(e.target.value)}
                     className='form-input add-post-input textarea'
@@ -69,6 +70,56 @@ const Form = () => {
                             onChange={e => setStatus(e.target.value)}
                         />
                     </div>
+                    <div className='radio-btn'>
+                    <label htmlFor='mood'>
+                        Mood:
+                    </label>
+                    <input 
+                        type='radio'
+                        name='mood'
+                        id='mood-1'
+                        value={"Happy"}
+                        onChange={e => setMood(e.target.value)}
+                    />
+                    <label htmlFor='mood-1'>Happy</label>
+
+                    <input 
+                        type='radio'
+                        name='mood'
+                        id='mood-2'
+                        value={"Sad"}
+                        onChange={e => setMood(e.target.value)}
+                    />
+                    <label htmlFor='mood-2'>Sad</label>
+
+                    <input 
+                        type='radio'
+                        name='mood'
+                        id='mood-3'
+                        value={"Angry"}
+                        onChange={e => setMood(e.target.value)}
+                    />
+                    <label htmlFor='mood-3'>Angry</label>
+
+                    <input 
+                        type='radio'
+                        name='mood'
+                        id='mood-4'
+                        value={"Fear"}
+                        onChange={e => setMood(e.target.value)}
+                    />
+                    <label htmlFor='mood-4'>Fear</label>
+
+                    <input 
+                        type='radio'
+                        name='mood'
+                        id='mood-5'
+                        value={"Neutral"}
+                        onChange={e => setMood(e.target.value)}
+                    />
+                    <label htmlFor='mood-5'>Neutral</label>
+                    </div>
+
                 </div>
                 <button className='form-btn'>submit</button>
             </form>

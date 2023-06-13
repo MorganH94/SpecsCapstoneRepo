@@ -52,6 +52,7 @@ const Profile = () => {
                 <h2>{post.title}</h2>
                 <h4>{post.user.username}</h4>
                 <p>{post.content}</p>
+                <p>{post.mood}</p>
                 {
                     userId === post.userId &&
                     <div>

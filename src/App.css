@@ -1,8 +1,9 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 
+/* Reset styles */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,42 +13,46 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
-
 
 /* Reset styles */
 * {
@@ -142,20 +147,21 @@ a:hover {
 }
 
 .logout-btn {
-	color: #f0f0f0;
-	text-decoration: none;
-	transition: .3s;
-	font-size: 1rem;
-	background: transparent;
-	border: none;
-	padding: 0;
-	margin: 0;
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: .3s;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
   cursor: pointer;
 }
 
 .logout-btn:hover {
-	color: #F571CB;
+  color: #F571CB;
 }
+
 .nav-btn {
   color: #F571CB;
   text-decoration: none;
@@ -183,6 +189,7 @@ a:hover {
   align-items: center;
   margin: 25px auto;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  padding: 15px; /* Add padding for better spacing */
 }
 
 .form-input {
@@ -191,6 +198,7 @@ a:hover {
   border-bottom: 1px solid #FF8C94;
   color: #F2EBFF;
   text-align: center;
+  padding: 5px 10px; /* Add padding for better spacing */
 }
 
 .form-btn {
@@ -231,29 +239,32 @@ a:hover {
 }
 
 /* Add Post */
-
 .add-post-form {
-	width: 400px;
-	height: 500px;
+  width: 400px;
+  height: 500px;
 }
 
 .status-container {
-	width: 200px;
+  width: 200px;
 }
 
 .textarea {
-	border: 1px solid #f57145;
-	border-radius: 5px;
-	height: 150px;
+  border: 1px solid #f57145;
+  border-radius: 5px;
+  height: 150px;
+  padding: 5px 10px; /* Add padding for better spacing */
 }
 
 .radio-btn {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-post-input {
-	width: 300px;
+  width: 300px;
+  text-align: center;
+  padding: 20px 20px; /* Add padding for better spacing */
 }
 
 .status-container {
@@ -266,17 +277,20 @@ a:hover {
   border-radius: 5px;
   height: 150px;
   text-align: center;
+  padding: 15px 10px; /* Add padding for better spacing */
 }
 
 .radio-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 15px;
 }
 
 .add-post-input {
   width: 300px;
   text-align: center;
+  padding: 5px 10px; /* Add padding for better spacing */
 }
 
 /* Posts */
@@ -287,6 +301,5 @@ a:hover {
   margin: 25px auto;
   padding: 15px;
   text-align: center;
+  background-color: #e8b7ee;
 }
-
-

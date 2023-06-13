@@ -27,22 +27,22 @@ const Header = () => {
           </li>
           <li>
             <NavLink style={styleActiveLink} to="profile">
-              Profile
+              My Entries
             </NavLink>
           </li>
           <li>
             <NavLink style={styleActiveLink} to="form">
-              Add Post
+              Add Entry
             </NavLink>
           </li>
           <li>
             <button className="logout-btn" onClick={() => authCtx.logout()}>
-              Logout
+              Sign Out
             </button>
           </li>
           <li>
             <NavLink style={styleActiveLink} to="auth">
-              Login or Register
+              Login or Sign Up
             </NavLink>
           </li>
         </ul>
