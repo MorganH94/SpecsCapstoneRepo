@@ -63,9 +63,7 @@ export const AuthContextProvider = (props) => {
       clearTimeout(logoutTimer)
     }
   }, [])
-
-
-
+  
   const login = (token, exp, userId) => {
     setToken(token)
     setUserId(userId)

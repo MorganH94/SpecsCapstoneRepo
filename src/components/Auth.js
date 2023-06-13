@@ -29,7 +29,6 @@ const Auth = () => {
         })
 };
   
-
   return (
     <main>
       <h1>Welcome to Nirvana</h1>
