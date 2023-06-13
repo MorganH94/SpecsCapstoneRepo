@@ -1,38 +1,292 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(135deg, #FF8C94, #FFDAB9, #9FB3FF, #FFBD7E);
+  background-size: 800% 800%;
+  animation: gradientAnimation 20s ease infinite;
+  color: #F2EBFF;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
+h4 {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #FF8C94;
+  padding: 10px 0;
+  text-align: center;
+}
+
+a {
+  color: #F2EBFF;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: #F571CB;
+}
+
+.app {
+  position: relative;
   min-height: 100vh;
+}
+
+/* Header */
+.header {
+  height: 80px;
+  background-image: url("https://cdn.shopify.com/s/files/1/0100/6082/files/glacierbg.jpg?v=1613677492");
+  background-size: cover;
+  background-position: center;
+  color: #F2EBFF;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav li {
+  padding: 0 10px;
+}
+
+.logout-btn {
+	color: #f0f0f0;
+	text-decoration: none;
+	transition: .3s;
+	font-size: 1rem;
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+	color: #F571CB;
+}
+.nav-btn {
+  color: #F571CB;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  color: #F2EBFF;
+}
+
+/* Form */
+.form {
+  background: #e8b7ee; /* Update the background color to the desired light purple */
+  border: 1px solid #F2EBFF;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #FF8C94;
+  color: #F2EBFF;
+  text-align: center;
+}
+
+.form-btn {
+  border: 1px solid #F571CB;
+  border-radius: 5px;
+  color: #F571CB;
+  background: transparent;
+  padding: 10px 20px;
+  transition: 0.5s;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #e271d9;
+  color: #F2EBFF;
+  transform: translateY(-3px);
+}
+
+/* Auth */
+.auth-form {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.auth-input {
+  width: 200px;
+  text-align: center;
+}
+
+.auth-msg {
+  margin-bottom: 15px;
+}
+
+/* Add Post */
+
+.add-post-form {
+	width: 400px;
+	height: 500px;
+}
+
+.status-container {
+	width: 200px;
+}
+
+.textarea {
+	border: 1px solid #f57145;
+	border-radius: 5px;
+	height: 150px;
+}
+
+.radio-btn {
+	display: flex;
+	align-items: center;
+}
+
+.add-post-input {
+	width: 300px;
+}
+
+.status-container {
+  width: 200px;
+  text-align: center;
+}
+
+.textarea {
+  border: 1px solid #FF8C94;
+  border-radius: 5px;
+  height: 150px;
+  text-align: center;
+}
+
+.radio-btn {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-post-input {
+  width: 300px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Posts */
+.post-card {
+  width: 500px;
+  border: 1px solid #F2EBFF;
+  border-radius: 5px;
+  margin: 25px auto;
+  padding: 15px;
+  text-align: center;
 }
+
+
